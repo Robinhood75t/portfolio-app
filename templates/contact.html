@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Robin Hood</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/about'">About</button>
+            <button onclick="location.href='/projects'">Projects</button>
+            <button onclick="location.href='/contact'">Contact</button>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Get in Touch</h1>
+        <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+
+        <!-- Contact Form -->
+        <form action="/submit_contact" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Contact Information -->
+<div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:robinparjapatikumar@gmail.com">robinparjapatikumar@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+919368122142">+91 93681 22142</a></p>
+</div>
+
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+    </section>
+
+</body>
+</html>

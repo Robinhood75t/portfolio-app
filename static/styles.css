@@ -1,0 +1,398 @@
+/* Reset default margin and padding */
+* {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 44px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Navbar buttons */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-buttons button {
+    background: white;
+    border: 0px;
+    color: rgb(11, 11, 11);
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-buttons button:hover {
+    background: black;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+/* Profile Picture on the Left */
+.profile-picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-picture img {
+    width: 350px;  /* Adjusted Size */
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Intro Text on the Right */
+.intro-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.intro-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.intro-text p {
+    font-size: 18px;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6; /* Improve readability */
+}
+
+
+/* White Line Separator */
+.separator {
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    margin: 40px auto;
+}
+
+/* Achievement Section (Flexbox for Alignment) */
+.achievements {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Individual Achievement Box */
+.achievement-box {
+    width: 400px; /* Increased Size */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.achievement-box:hover {
+    transform: scale(1.05);
+}
+
+/* Images inside Achievement Box */
+.achievement-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Links */
+.achievement-box a {
+    display: block;
+    margin-top: 10px;
+    color: #1b5dc0;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.achievement-box a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.social-media h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Specific Colors */
+.social-icons a:nth-child(1) { color: #ffffff; } /* GitHub */
+.social-icons a:nth-child(2) { color: #E4405F; } /* Instagram */
+.social-icons a:nth-child(3) { color: #0077B5; } /* LinkedIn */
+.social-icons a:nth-child(4) { color: #1DA1F2; } /* Twitter */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .achievements {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .achievement-box {
+        width: 90%; /* Adjust for smaller screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture img {
+        width: 250px; /* Adjust for mobile */
+        height: 250px;
+    }
+
+    .intro-text {
+        padding: 10px;
+        margin-top: 20px;
+    }
+}
+/* about page */
+/* Push content down to avoid overlap */
+.about {
+    color: white;
+    text-align: center;
+    padding: 100px 20px 50px;  /* Push content down */
+}
+
+/* Ensure navbar doesn’t block content when scrolling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Fix scrolling issue */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure navbar stays above content */
+body {
+    padding-top: 80px; /* Adjust this based on navbar height */
+}
+
+.projects {
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project-card {
+    background: transparent; /* Removes the black box */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Optional: Light border */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+.project-card h2,
+.project-card p {
+    background: none; /* Ensures no black background on text */
+    color: white; /* Keeps text readable */
+}
+
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.visit-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.visit-btn:hover {
+    background: black;
+    color: white;
+}
+/* contact page */
+.contact-section {
+    max-width: 600px;
+    margin: 120px auto;
+    text-align: center;
+    color: white;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background: white;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white; 
+    font-size: 30px; /* Increase icon size */
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff; /* Light green hover effect */
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+.contact-info {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+.contact-info a {
+    color: white; /* Light green for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

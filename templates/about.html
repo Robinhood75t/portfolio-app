@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Robin Hood</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/about'">About</button>
+            <button onclick="location.href='/projects'">Projects</button>
+            <button onclick="location.href='/contact'">Contact</button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <h1>About Me</h1>
+        <p>Hey! I'm Robin, a passionate backend developer and data enthusiast. I love working with **Flask, MySQL, C++, and Python** to build scalable and efficient systems.  
+        With over **300+ problems solved on LeetCode**, I specialize in **Data Structures & Algorithms**. I also create educational content on my **YouTube channel - Robin Hood**, where I explain coding problems in an easy-to-understand way.</p>
+
+        <h1>Skills</h1>
+        <ul>
+            <li><h3>Programming Languages: </h3>C++, Python, Java, JavaScript</li>
+            <li><h3>Backend Development:</h3></li> Flask, MySQL</li>
+            <li><h3>Version Control:</h3> Git, GitHub</li>
+            <li><h3>Problem Solving:</h3> LeetCode (300+ problems solved)</li>
+            <li><h3>Content Creation:</h3> YouTube, Blogging (ROBIN BLOGS)</li>
+        </ul>
+
+        <h2>Education</h2>
+        <p>B.Sc. in Computer Science - Meerut College, CCSU (74.15%)</p>
+
+        <h2>Resume</h2>
+        <a href="resume_link_here" target="_blank" class="btn">Download Resume</a>
+    </section>
+
+</body>
+</html>
